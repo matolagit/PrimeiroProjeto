@@ -39,8 +39,7 @@ public class PilhaTest01 {
                 pilha.imprime();
             }else {
                 if (opcao >= 4){
-                    throw new InputMismatchException("Selecione as opções apresentadas no menu." +
-                            "");
+                    throw new InputMismatchException("Selecione as opções apresentadas no menu.");
                 }
             }
 
