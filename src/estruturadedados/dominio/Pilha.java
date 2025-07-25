@@ -55,7 +55,7 @@ public class Pilha {
     }
 
     public void imprime() {
-        System.out.print(" [");
+        System.out.print("[");
         for (int i = 0; i < tamanho; i++) {
             System.out.print(estrutura[i] + " ");
         }
