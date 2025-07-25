@@ -36,28 +36,28 @@ public class Pilha {
         return (tamanho == 0);
     }
 
-    public void inserir(int item) {
+    public void inserir(int item)throws Exception {
         if (estaCheia()) {
-            System.out.println("A pilha está cheia, não é possivel inserir mais valores.\n");
+            throw new Exception("A pilha está cheia, não é possivel inserir mais valores.\n");
         } else {
             estrutura[tamanho] = item;
             tamanho++;
         }
     }
 
-    public int remover() {
-        if (estaVazia()){
-            System.out.println("A pilha está vazia, não tem como remover mais valores.\n");
-        }else {
+    public int remover()throws Exception {
+        if (estaVazia()) {
+            throw new Exception("A pilha está vazia, não tem como remover mais valores.\n");
+        } else {
             tamanho--;
         }
         return 0;
     }
 
-    public void imprime(){
+    public void imprime() {
         System.out.print(" [");
         for (int i = 0; i < tamanho; i++) {
-            System.out.print(estrutura[i]+" ");
+            System.out.print(estrutura[i] + " ");
         }
         System.out.println("]");
     }
