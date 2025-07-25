@@ -25,24 +25,25 @@ public class PilhaTest01 {
                     System.out.println("Digite um valor na pilha");
                     item = scanner.nextInt();
                     pilha.inserir(item);
-
                 } catch (Exception e) {
-                    throw new Exception(e.getMessage());
+                    System.out.println("Erro ao tentar inserir valor: "+e.getMessage());
+                    continue;
                 }
             } else if (opcao == 2) {
                 try {
                     item = pilha.remover();
                 } catch (Exception e) {
-                    throw new Exception(e.getMessage());
+                    System.out.println("Erro ao tentar remover valor: "+e.getMessage());
+                    continue;
                 }
             } else if (opcao == 3){
                 pilha.imprime();
             }else {
                 if (opcao >= 4){
-                    throw new InputMismatchException("Selecione as opções apresentadas no menu.");
+                    System.out.println("ERRO:Selecione as opções apresentadas no menu.");
+                    continue;
                 }
             }
-
         } while (opcao != 0);
     }
 }

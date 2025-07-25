@@ -24,21 +24,22 @@ public class FilaTest01 {
                     item = scanner.nextInt();
                     fila.inserir(item);
                 }catch (Exception e){
-                    throw new Exception(e.getMessage());
+                    System.out.println("Erro ao tentar inserir valor: "+e.getMessage());
+                    continue;
                 }
             } else if (opcao == 2) {
                 try {
                     item = fila.remover();
                 }catch (Exception e){
-                    throw new Exception(e.getMessage());
+                    System.out.println("Erro ao tentar remover valor"+e.getMessage());
+                    continue;
                 }
             }else if (opcao == 3){
                 fila.imprime();
             }
             else{
-                if (opcao >= 4){
-                    throw new InputMismatchException("Selecione as opções apresentadas no menu.");
-                }
+                    System.out.println("ERRO:Selecione as opções apresentadas no menu");
+                    continue;
             }
         }while (opcao != 0);
     }
