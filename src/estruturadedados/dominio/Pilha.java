@@ -36,7 +36,7 @@ public class Pilha {
         return (tamanho == 0);
     }
 
-    public void inserir(int item)throws Exception {
+    public void inserir(int item){
         if (estaCheia()) {
             System.err.println("A pilha está cheia, não é possivel inserir mais valores.\n");
         } else {
@@ -45,7 +45,7 @@ public class Pilha {
         }
     }
 
-    public int remover()throws Exception {
+    public int remover(){
         if (estaVazia()) {
             System.err.println("A pilha está vazia, não tem como remover mais valores.\n");
         } else {

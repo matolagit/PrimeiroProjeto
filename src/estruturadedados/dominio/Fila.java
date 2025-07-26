@@ -27,7 +27,7 @@ public class Fila {
         return false;
     }
 
-    public void inserir(int item)throws Exception {
+    public void inserir(int item){
         if (filaCheia()) {
             System.err.println("A fila está cheia, não é possível inserir mais valores");
         } else {
@@ -37,7 +37,7 @@ public class Fila {
 
     }
 
-    public int remover() throws Exception{
+    public int remover(){
         if (filaVazia()) {
             System.err.println("A fila está vazia, não é possível remover mais valores");
         } else {
