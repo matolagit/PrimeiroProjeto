@@ -29,7 +29,7 @@ public class Fila {
 
     public void inserir(int item)throws Exception {
         if (filaCheia()) {
-            throw new Exception("A fila está cheia, não é possível inserir mais valores");
+            System.err.println("A fila está cheia, não é possível inserir mais valores");
         } else {
             estrutura[ultimo] = item;
             ultimo++;
@@ -39,7 +39,7 @@ public class Fila {
 
     public int remover() throws Exception{
         if (filaVazia()) {
-            throw new Exception("A fila está vazia, não é possível remover mais valores");
+            System.err.println("A fila está vazia, não é possível remover mais valores");
         } else {
             primeiro++;
         }

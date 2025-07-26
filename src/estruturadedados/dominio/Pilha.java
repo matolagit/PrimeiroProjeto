@@ -38,7 +38,7 @@ public class Pilha {
 
     public void inserir(int item)throws Exception {
         if (estaCheia()) {
-            throw new Exception("A pilha está cheia, não é possivel inserir mais valores.\n");
+            System.err.println("A pilha está cheia, não é possivel inserir mais valores.\n");
         } else {
             estrutura[tamanho] = item;
             tamanho++;
@@ -47,7 +47,7 @@ public class Pilha {
 
     public int remover()throws Exception {
         if (estaVazia()) {
-            throw new Exception("A pilha está vazia, não tem como remover mais valores.\n");
+            System.err.println("A pilha está vazia, não tem como remover mais valores.\n");
         } else {
             tamanho--;
         }
