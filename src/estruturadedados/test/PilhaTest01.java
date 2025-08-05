@@ -2,6 +2,7 @@ package estruturadedados.test;
 
 import estruturadedados.dominio.Pilha;
 
+import java.util.EmptyStackException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -25,14 +26,14 @@ public class PilhaTest01 {
                     System.out.println("Digite um valor na pilha");
                     item = scanner.nextInt();
                     pilha.inserir(item);
-                } catch (Exception e) {
+                } catch (StackOverflowError e) {
                     System.err.println("Erro ao tentar inserir valor: "+e.getMessage());
                     continue;
                 }
             } else if (opcao == 2) {
                 try {
                     item = pilha.remover();
-                } catch (Exception e) {
+                } catch (EmptyStackException e) {
                     System.err.println("Erro ao tentar remover valor: "+e.getMessage());
                     continue;
                 }
