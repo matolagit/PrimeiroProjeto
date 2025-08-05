@@ -3,7 +3,6 @@ package estruturadedados.test;
 import estruturadedados.dominio.Fila;
 
 import java.util.InputMismatchException;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class FilaTest01 {
@@ -24,14 +23,14 @@ public class FilaTest01 {
                     System.out.println("Digite o valor: ");
                     item = scanner.nextInt();
                     fila.inserir(item);
-                }catch (IndexOutOfBoundsException e){
+                }catch (Exception e){
                     System.err.println("Erro ao tentar inserir valor: "+e.getMessage());
                     continue;
                 }
             } else if (opcao == 2) {
                 try {
                     item = fila.remover();
-                }catch (UnsupportedOperationException e){
+                }catch (Exception e){
                     System.err.println("Erro ao tentar remover valor"+e.getMessage());
                     continue;
                 }
